@@ -6,6 +6,14 @@ h1 {
   @apply text-[80px] font-extrabold leading-[88px];
 }
 
+h2 {
+  @apply text-[56px] font-extrabold leading-[64px];
+}
+
+h3 {
+  @apply text-[20px] font-extrabold leading-[32px];
+}
+
 p {
   @apply text-[18px] leading-[32px];
 }

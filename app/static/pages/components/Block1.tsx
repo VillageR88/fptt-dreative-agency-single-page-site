@@ -15,7 +15,7 @@ const linkItems = {
 
 export default function Block1() {
   return (
-    <div className="relative flex h-[800px] w-full items-start justify-between px-[32px] md:px-[40px]">
+    <div className="relative flex h-[800px] w-full max-w-[1275px] items-start justify-between self-end">
       <div className="relative z-[1] mt-[112px] flex w-full max-w-[730px] flex-col gap-[48px]">
         <section className="flex flex-col gap-[39px]">
           <h1 className="w-full max-w-[720px]">{items.title}</h1>

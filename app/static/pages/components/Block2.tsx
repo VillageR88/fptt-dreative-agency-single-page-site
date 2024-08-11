@@ -22,7 +22,7 @@ export default function Block2() {
             alt="pattern"
           />
           <section className="flex flex-col gap-[43px]">
-            <h2 className="text-[56px] font-extrabold leading-[64px] text-white">
+            <h2 className="text-white">
               <span className="text-[#F94F4F]">Design</span> is strategic.
             </h2>
             <p className="text-white">
