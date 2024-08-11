@@ -23,7 +23,7 @@ export default function Navbar() {
     <nav className="z-[2] flex h-[64px] w-full items-center justify-between overflow-x-clip pl-[32px] md:h-[178px] md:pl-[40px]">
       <img src={logo as string} alt="logo" />
       <div className="flex h-full w-[705px] items-center gap-[48px] bg-[#F94F4F] pl-[69px]">
-        <ul className="flex gap-[32px]">
+        <ul className="flex w-full max-w-[225px] justify-between">
           {items.map((item) => (
             <li key={item.title}>
               <Link className="text-[16px] leading-[32px] text-white transition-all hover:font-bold" href={item.href}>
