@@ -17,3 +17,12 @@ h3 {
 p {
   @apply text-[18px] leading-[32px];
 }
+
+.previous,
+.next {
+  @apply stroke-[#F94F4F] transition-all;
+}
+.previous:hover,
+.next:hover {
+  @apply stroke-[#FF9393];
+}
