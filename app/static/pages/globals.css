@@ -1,0 +1,145 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: 'Lexend Deca', sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+button,
+a {
+  @apply font-mono font-bold;
+}
+
+h1 {
+  @apply text-[56px] font-bold leading-[56px] tracking-[-2.5px] text-white;
+}
+
+h2 {
+  @apply text-[48px] font-bold leading-[48px] tracking-[-2.14px];
+}
+
+h3,
+h4,
+.h4 {
+  @apply text-[20px] font-bold leading-[28px] tracking-[-0.89px] md:text-[24px] md:tracking-[-1.07px];
+}
+
+p {
+  @apply text-[15px] font-normal leading-[25px] tracking-normal;
+}
+
+li:has(.line):last-child .line {
+  @apply hidden;
+}
+
+.buttonType1 {
+  @apply flex h-[53px] w-[180px] items-center justify-center border-2 border-[#FCB72B] bg-[#FCB72B] text-[15px] leading-[25px] text-[#FFFFFF] transition hover:bg-transparent hover:text-[#FCB72B];
+}
+
+.buttonStore {
+  @apply h-[56px] rounded-[4px] bg-[#E5ECF4] hover:cursor-pointer;
+}
+ul > li:nth-of-type(1) > .buttonStore {
+  @apply w-[159px];
+}
+ul > li:nth-of-type(2) > .buttonStore {
+  @apply w-[182px];
+}
+
+nav .logo {
+  @apply h-[20px] w-[75.5px] fill-[#495567] md:h-[29px] md:w-[108px];
+}
+
+nav .navLinks {
+  @apply hidden md:flex;
+}
+
+nav > div:nth-of-type(2) .buttonType1 {
+  @apply hidden md:flex;
+}
+
+#mobileMenu {
+  @apply appearance-none object-cover hover:cursor-pointer;
+  content: url('../assets/icons/hamburger.svg');
+}
+
+#mobileMenu.open {
+  content: url('../assets/icons/close.svg');
+}
+
+body:has(#mobileMenu.open) {
+  @apply flex min-h-screen overflow-hidden;
+}
+
+#mobileMenuList {
+  @apply pointer-events-none;
+}
+
+#mobileMenuList > div {
+  transition: all 0.5s ease 0s;
+  @apply -translate-x-full;
+}
+
+nav:has(#mobileMenu) > #mobileMenuList {
+  transition: all 0.5s ease 0s;
+
+  @apply flex bg-transparent;
+}
+
+footer .logo {
+  @apply fill-white;
+}
+
+.hidden-paragraph {
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition:
+    max-height 0.5s ease,
+    opacity 0.5s ease,
+    padding-top 0.5s ease;
+}
+
+.visible-paragraph {
+  max-height: 200px;
+  opacity: 1;
+  padding-top: 24px;
+  transition:
+    max-height 0.5s ease,
+    opacity 0.5s ease,
+    padding-top 0.5s ease;
+}
+
+.buttonLearnMore::after {
+  content: 'Learn More';
+}
+
+@media (max-width: 768px) {
+  .visible-paragraph {
+    max-height: 400px;
+  }
+  nav:has(#mobileMenu.open) #mobileMenuList {
+    @apply bg-black/50 opacity-100;
+  }
+
+  body:has(#mobileMenu.open) #mobileMenuList {
+    @apply pointer-events-auto;
+  }
+
+  nav:has(#mobileMenu.open) #mobileMenuList > div {
+    @apply translate-x-0;
+  }
+  h1 {
+    @apply text-[40px] leading-[40px] tracking-[-1.79px];
+  }
+  h2 {
+    @apply text-[32px] leading-[32px] tracking-[-1.43px];
+  }
+}
