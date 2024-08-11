@@ -1,25 +1,27 @@
-'use client';
+//placeholder
 
-import { createContext } from 'preact';
-import { useRef } from 'preact/hooks';
-import type { MutableRefObject, ReactNode } from 'preact/compat';
+// 'use client';
 
-export const DataContext = createContext(
-  {} as {
-    menuButtonRef: MutableRefObject<HTMLButtonElement | null>;
-  },
-);
+// import { createContext } from 'preact';
+// import { useRef } from 'preact/hooks';
+// import type { MutableRefObject, ReactNode } from 'preact/compat';
 
-export default function DataProvider({ children }: { children: ReactNode }) {
-  const menuButtonRef = useRef<HTMLButtonElement>(null);
+// export const DataContext = createContext(
+//   {} as {
+//     menuButtonRef: MutableRefObject<HTMLButtonElement | null>;
+//   },
+// );
 
-  return (
-    <DataContext.Provider
-      value={{
-        menuButtonRef,
-      }}
-    >
-      {children}
-    </DataContext.Provider>
-  );
-}
+// export default function DataProvider({ children }: { children: ReactNode }) {
+//   const menuButtonRef = useRef<HTMLButtonElement>(null);
+
+//   return (
+//     <DataContext.Provider
+//       value={{
+//         menuButtonRef,
+//       }}
+//     >
+//       {children}
+//     </DataContext.Provider>
+//   );
+// }

@@ -1,5 +1,5 @@
 import { render } from 'preact';
-import DataContext from './_lib/DataContext';
+// import DataContext from './_lib/DataContext'; // placeholder
 import Navbar from './components/Navbar';
 import Home from './page';
 import Footer from './components/Footer';
@@ -11,13 +11,13 @@ document.body.className =
 function App() {
   return (
     <>
-      <DataContext>
-        <Navbar />
-        <main className="mx-auto mb-auto flex w-full  flex-col items-center overflow-x-clip ">
-          <Home />
-        </main>
-        <Footer />
-      </DataContext>
+      {/* <DataContext> */}
+      <Navbar />
+      <main className="mx-auto mb-auto flex w-full flex-col items-center overflow-x-clip">
+        <Home />
+      </main>
+      <Footer />
+      {/* </DataContext> */}
     </>
   );
 }

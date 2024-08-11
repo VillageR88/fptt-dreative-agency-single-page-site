@@ -20,7 +20,7 @@ const buttonTitle = 'Schedule a Call';
 
 export default function Navbar() {
   return (
-    <nav className="z-[2] flex h-[64px] w-full items-center justify-between overflow-x-clip px-[32px] md:h-[178px] md:px-[40px]">
+    <nav className="z-[2] flex h-[64px] w-full items-center justify-between overflow-x-clip pl-[32px] md:h-[178px] md:pl-[40px]">
       <img src={logo as string} alt="logo" />
       <div className="flex h-full w-[705px] items-center gap-[48px] bg-[#F94F4F] pl-[69px]">
         <ul className="flex gap-[32px]">
