@@ -15,7 +15,7 @@ const linkItems = {
 
 export default function Block1() {
   return (
-    <div className="relative flex h-[895px] w-full items-start justify-between px-[32px] md:px-[40px]">
+    <div className="relative flex h-[800px] w-full items-start justify-between px-[32px] md:px-[40px]">
       <div className="relative z-[1] mt-[112px] flex w-full max-w-[730px] flex-col gap-[48px]">
         <section className="flex flex-col gap-[39px]">
           <h1 className="w-full max-w-[720px]">{items.title}</h1>
@@ -28,7 +28,7 @@ export default function Block1() {
           {linkItems.title}
         </Link>
       </div>
-      <img className="absolute right-0" src={heroImage as string} alt="men working on computers" />
+      <img className="absolute right-0" height="800" src={heroImage as string} alt="men working on computers" />
     </div>
   );
 }
