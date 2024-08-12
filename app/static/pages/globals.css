@@ -18,6 +18,10 @@ p {
   @apply text-[15px] xl:text-[18px] leading-[25px] xl:leading-[32px];
 }
 
+a{
+  @apply text-[15px] xl:text-[16px];
+}
+
 .previous,
 .next {
   @apply stroke-[#F94F4F] transition-all;
