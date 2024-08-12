@@ -19,10 +19,14 @@ const items = [
 
 export default function Block3() {
   return (
-    <div className="flex w-full justify-end pl-[39px]">
-      <h2 className="z-[2] mr-[-160px] mt-[200px] h-fit w-full max-w-[281px] xl:max-w-[540px]">{title}</h2>
-      <div className="z-[1] mt-[-120px] flex h-[1100px] items-center justify-end bg-[#F94F4F] pr-[106px] lg:mt-[-200px] lg:w-[600px] xl:w-[895px]">
-        <ul className="flex flex-col gap-[56px]">
+    <div className="flex w-full justify-between xl:justify-end xl:pl-[39px]">
+      <div className="relative z-[2] flex  w-full justify-center px-[24px] lg:px-0 xl:mr-[-160px] xl:w-fit">
+        <h2 className="z-[2] mt-[120px] h-fit w-full max-w-[281px] lg:mt-0 xl:mt-[200px] xl:max-w-[540px] xl:pl-0">
+          {title}
+        </h2>
+      </div>
+      <div className="z-[1] mt-[-120px] flex h-[797px] w-[1400px] items-center justify-center bg-[#F94F4F] lg:mt-[-200px] xl:h-[1100px] xl:w-[895px] xl:justify-end xl:pr-[106px]">
+        <ul className="flex flex-col gap-[40px] xl:gap-[56px]">
           {items.map((item, index) => (
             <li key={item} className="flex h-[200px] w-[355px] flex-col gap-[24px] xl:w-[504px]">
               <span className="absolute text-[80px] font-extrabold leading-[88px] text-white/25">

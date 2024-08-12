@@ -42,16 +42,16 @@ export default function Block4() {
   const [isPlaying, setIsPlaying] = useState(false);
   return (
     <div className="relative flex min-h-[728px] w-full justify-start">
-      <div className="relative z-[1] flex h-[528px] min-w-[735px] items-center bg-[#191921]">
+      <div className="relative z-[1] flex h-[352px] w-1/2 max-w-[735px] items-center justify-center bg-[#191921] pl-[20px] xl:h-[528px]">
         <img
           alt="pattern"
-          className="absolute right-[-67px] top-[186px] z-[2]"
+          className="absolute right-[-31px] top-[126px] z-[2] h-[28px] w-[62px] xl:right-[-67px] xl:top-[186px] xl:h-[60px] xl:w-[134px]"
           src={imagePattern as string}
           width={134}
           height={60}
         />
-        <div className="ml-[165px] flex h-[233px] w-[445px] flex-col gap-[51px]">
-          <h2 className="text-white">{title[currentSlide].mainTitle}</h2>
+        <div className="flex h-[233px] w-[390px] flex-col justify-center gap-[51px] xl:w-[445px]">
+          <h2 className="max-w-[281px] text-white xl:max-w-full">{title[currentSlide].mainTitle}</h2>
           <div className="flex gap-[16px]">
             <button
               disabled={isPlaying}
@@ -104,14 +104,14 @@ export default function Block4() {
             setCurrentSlide(e.index as TitleKey);
           }}
         >
-          <div className="panel image-container hover:cursor-grab active:cursor-grabbing" key={TitleKey.guidelines}>
-            <img className="pointer-events-none" src={imageSlide1 as string} alt="Slide 1" />
+          <div className="panel image-container" key={TitleKey.guidelines}>
+            <img className="carouselImage" src={imageSlide1 as string} alt="Slide 1" />
           </div>
-          <div className="panel image-container hover:cursor-grab active:cursor-grabbing" key={TitleKey.merchandise}>
-            <img className="pointer-events-none" src={imageSlide2 as string} alt="Slide 2" />
+          <div className="panel image-container" key={TitleKey.merchandise}>
+            <img className="carouselImage" src={imageSlide2 as string} alt="Slide 2" />
           </div>
-          <div className="panel image-container hover:cursor-grab active:cursor-grabbing" key={TitleKey.design}>
-            <img className="pointer-events-none" src={imageSlide3 as string} alt="Slide 3" />
+          <div className="panel image-container" key={TitleKey.design}>
+            <img className="carouselImage" src={imageSlide3 as string} alt="Slide 3" />
           </div>
         </Flicking>
         <div className="absolute bottom-[68px] right-[154px] z-[1]">

@@ -7,7 +7,7 @@ h1 {
 }
 
 h2 {
-  @apply text-[32px] xl:text-[56px] font-extrabold leading-[40px] xl:leading-[64px];
+  @apply text-[32px] font-extrabold leading-[40px] xl:text-[56px] xl:leading-[64px];
 }
 
 h3 {
@@ -15,10 +15,10 @@ h3 {
 }
 
 p {
-  @apply text-[15px] xl:text-[18px] leading-[25px] xl:leading-[32px];
+  @apply text-[15px] leading-[25px] xl:text-[18px] xl:leading-[32px];
 }
 
-a{
+a {
   @apply text-[15px] xl:text-[16px];
 }
 
@@ -41,7 +41,12 @@ a{
 }
 
 .image-container {
+  @apply hover:cursor-grab active:cursor-grabbing;
   position: relative;
+}
+
+.carouselImage {
+  @apply w-full h-full object-cover pointer-events-none;
 }
 
 .image-container::after {
