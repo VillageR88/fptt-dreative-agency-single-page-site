@@ -1,6 +1,13 @@
 import imageSlide1 from '../../assets/desktop/image-slide-1.jpg';
 import imagePattern from '../../assets/desktop/bg-pattern-wavy-white.svg';
 
+const title = 'Brand naming & guidelines';
+
+const titlesButtons = {
+  previous: 'previous slide',
+  next: 'next slide',
+};
+
 export default function Block4() {
   return (
     <div className="relative flex h-[728px] w-full justify-start">
@@ -13,11 +20,11 @@ export default function Block4() {
           height={60}
         />
         <div className="ml-[165px] flex h-[233px] w-[445px] flex-col gap-[51px]">
-          <h2 className="text-white">Brand naming & guidelines</h2>
+          <h2 className="text-white">{title}</h2>
           <div className="flex gap-[16px]">
             <button title="previous slide" type="button" className="previous relative z-40 size-[40px]">
               <svg width="40" height="40" xmlns="http://www.w3.org/2000/svg">
-                <title>Previous slide</title>
+                <title>{titlesButtons.previous}</title>
                 <g transform="matrix(-1 0 0 1 40 0)" fill="none" fillRule="evenodd">
                   <circle cx="20" cy="20" r="19.5" />
                   <path strokeWidth="2" d="M17.5 15l5 5-5 5" />
@@ -26,7 +33,7 @@ export default function Block4() {
             </button>
             <button title="previous slide" type="button" className="previous relative z-40 size-[40px]">
               <svg width="40" height="40" xmlns="http://www.w3.org/2000/svg">
-                <title>next slide</title>
+                <title>{titlesButtons.next}</title>
                 <g fill="none" fillRule="evenodd">
                   <circle cx="20" cy="20" r="19.5" />
                   <path strokeWidth="2" d="M17.5 15l5 5-5 5" />

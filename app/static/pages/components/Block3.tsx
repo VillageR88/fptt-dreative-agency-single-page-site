@@ -1,3 +1,4 @@
+const title = 'Our approach for creating a winning brand';
 const items = [
   {
     title: 'Brand Strategy',
@@ -19,9 +20,7 @@ const items = [
 export default function Block3() {
   return (
     <div className="flex w-full justify-end">
-      <h2 className="z-[2] mr-[-160px] mt-[200px] h-fit w-full max-w-[540px]">
-        Our approach for creating a winning brand
-      </h2>
+      <h2 className="z-[2] mr-[-160px] mt-[200px] h-fit w-full max-w-[540px]">{title}</h2>
       <div className="z-[1] mt-[-200px] flex h-[1100px] w-[895px] items-center justify-end bg-[#F94F4F] pr-[106px]">
         <ul className="flex flex-col gap-[56px]">
           {items.map((item, index) => (
