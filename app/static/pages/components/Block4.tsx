@@ -43,8 +43,8 @@ export default function Block4() {
   const [currentSlide, setCurrentSlide] = useState<TitleKey>(TitleKey.guidelines);
   const [isPlaying, setIsPlaying] = useState(false);
   return (
-    <div className="relative flex min-h-[728px] w-full justify-start">
-      <div className="relative z-[1] flex h-[352px] w-1/2 max-w-[735px] items-center justify-center bg-[#191921] pl-[20px] xl:h-[528px]">
+    <div className="relative flex min-h-[472px] w-full justify-start xl:min-h-[728px]">
+      <div className="relative z-[1] flex h-[352px] w-1/2 max-w-[735px] items-center justify-center bg-[#191921] pl-[40px] xl:h-[528px]">
         <img
           alt="pattern"
           className="absolute right-[-31px] top-[126px] z-[2] h-[28px] w-[62px] xl:right-[-67px] xl:top-[186px] xl:h-[60px] xl:w-[134px]"
@@ -94,7 +94,7 @@ export default function Block4() {
           </div>
         </div>
       </div>
-      <div className="absolute right-0 z-0 h-[728px] w-[895px] ">
+      <div className="absolute right-0 z-0 w-3/5 xl:h-[728px] xl:w-[895px] ">
         <Flicking
           onMoveStart={() => {
             setIsPlaying(true);
