@@ -20,11 +20,11 @@ const items = [
 export default function Block3() {
   return (
     <div className="flex w-full justify-end pl-[39px]">
-      <h2 className="z-[2] mr-[-160px] mt-[200px] h-fit w-full max-w-[540px]">{title}</h2>
-      <div className="z-[1] mt-[-200px] flex h-[1100px] w-[895px] items-center justify-end bg-[#F94F4F] pr-[106px]">
+      <h2 className="z-[2] mr-[-160px] mt-[200px] h-fit w-full max-w-[281px] xl:max-w-[540px]">{title}</h2>
+      <div className="z-[1] mt-[-120px] flex h-[1100px] items-center justify-end bg-[#F94F4F] pr-[106px] lg:mt-[-200px] lg:w-[600px] xl:w-[895px]">
         <ul className="flex flex-col gap-[56px]">
           {items.map((item, index) => (
-            <li key={item} className="flex h-[200px] w-[504px] flex-col gap-[24px]">
+            <li key={item} className="flex h-[200px] w-[355px] flex-col gap-[24px] xl:w-[504px]">
               <span className="absolute text-[80px] font-extrabold leading-[88px] text-white/25">
                 {(index + 1).toLocaleString('en-US', {
                   minimumIntegerDigits: 2,

@@ -7,7 +7,7 @@ h1 {
 }
 
 h2 {
-  @apply text-[56px] font-extrabold leading-[64px];
+  @apply text-[32px] xl:text-[56px] font-extrabold leading-[40px] xl:leading-[64px];
 }
 
 h3 {
