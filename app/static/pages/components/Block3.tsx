@@ -19,16 +19,16 @@ const items = [
 
 export default function Block3() {
   return (
-    <div className="flex w-full justify-between xl:justify-end xl:pl-[39px]">
-      <div className="relative z-[2] flex  w-full justify-center px-[24px] lg:px-0 xl:mr-[-160px] xl:w-fit">
-        <h2 className="z-[2] mt-[120px] h-fit w-full max-w-[281px] lg:mt-0 xl:mt-[200px] xl:max-w-[540px] xl:pl-0">
+    <div className="flex w-full flex-col justify-between md:flex-row xl:justify-end xl:pl-[39px]">
+      <div className="relative z-[2] flex w-full justify-center px-[24px] lg:px-0 xl:mr-[-160px] xl:w-fit">
+        <h2 className="z-[2] h-fit w-full max-w-[281px] md:mt-[120px] lg:mt-0 xl:mt-[200px] xl:max-w-[540px] xl:pl-0">
           {title}
         </h2>
       </div>
-      <div className="z-[1] flex h-[797px] w-[1400px] items-center justify-center bg-[#F94F4F] md:mt-[-120px] lg:mt-[-200px] xl:h-[1100px] xl:w-[895px] xl:justify-end xl:pr-[106px]">
+      <div className="z-[1] flex items-center justify-center bg-[#F94F4F] md:mt-[-120px] md:h-[797px] md:w-[1400px] lg:mt-[-200px] xl:h-[1100px] xl:w-[895px] xl:justify-end xl:pr-[106px]">
         <ul className="flex flex-col gap-[40px] xl:gap-[56px]">
           {items.map((item, index) => (
-            <li key={item} className="flex h-[200px] w-[355px] flex-col gap-[24px] xl:w-[504px]">
+            <li key={item} className="flex flex-col gap-[24px] md:h-[200px] md:w-[355px] xl:w-[504px]">
               <span className="absolute text-[80px] font-extrabold leading-[88px] text-white/25">
                 {(index + 1).toLocaleString('en-US', {
                   minimumIntegerDigits: 2,

@@ -11,7 +11,7 @@ h2 {
 }
 
 h3 {
-  @apply text-[20px] font-extrabold leading-[32px];
+  @apply text-[15px] font-extrabold leading-[20px] xl:text-[20px] xl:leading-[32px];
 }
 
 p {
@@ -46,7 +46,7 @@ a {
 }
 
 .carouselImage {
-  @apply pointer-events-none h-[472px] w-full object-cover object-right xl:h-full;
+  @apply pointer-events-none w-full object-cover object-right md:h-[472px] xl:h-full;
 }
 
 .animationElement {

@@ -43,11 +43,11 @@ export default function Block4() {
   const [currentSlide, setCurrentSlide] = useState<TitleKey>(TitleKey.guidelines);
   const [isPlaying, setIsPlaying] = useState(false);
   return (
-    <div className="relative flex min-h-[472px] w-full justify-start xl:min-h-[728px]">
-      <div className="relative z-[1] flex h-[352px] w-1/2 max-w-[735px] items-center justify-center bg-[#191921] pl-[40px] xl:h-[528px]">
+    <div className="relative flex w-full flex-col-reverse justify-start md:min-h-[472px] md:flex-row xl:min-h-[728px]">
+      <div className="relative z-[1] flex items-center justify-center bg-[#191921] pl-[40px] md:h-[352px] md:w-1/2 md:max-w-[735px] xl:h-[528px]">
         <img
           alt="pattern"
-          className="absolute right-[-31px] top-[126px] z-[2] h-[28px] w-[62px] xl:right-[-67px] xl:top-[186px] xl:h-[60px] xl:w-[134px]"
+          className="absolute right-[-31px] top-[126px] z-[2] hidden h-[28px] w-[62px] md:block xl:right-[-67px] xl:top-[186px] xl:h-[60px] xl:w-[134px]"
           src={imagePattern as string}
           width={134}
           height={60}
@@ -94,7 +94,7 @@ export default function Block4() {
           </div>
         </div>
       </div>
-      <div className="absolute right-0 z-0 w-3/5 xl:h-[728px] xl:w-[895px] ">
+      <div className="relative right-0 z-0 md:absolute md:w-3/5 xl:h-[728px] xl:w-[895px] ">
         <Flicking
           onMoveStart={() => {
             setIsPlaying(true);
@@ -122,12 +122,13 @@ export default function Block4() {
             <img className="carouselImage" src={imageSlide3 as string} alt="Slide 3" />
           </div>
         </Flicking>
-        <div className="absolute bottom-[68px] right-[154px] z-[1]">
-          <section ref={sectionRef} className="animationElement flex flex-col text-end">
-            <h3 className="text-white">{title[currentSlide].title}</h3>
-            <p className="text-white">{title[currentSlide].description}</p>
-          </section>
-        </div>
+        <section
+          ref={sectionRef}
+          className="animationElement absolute bottom-[45px] right-[40px] z-[1] flex flex-col text-end xl:bottom-[68px] xl:right-[154px]"
+        >
+          <h3 className="text-white">{title[currentSlide].title}</h3>
+          <p className="text-white">{title[currentSlide].description}</p>
+        </section>
       </div>
     </div>
   );
