@@ -19,7 +19,7 @@ const items = [
 
 export default function Block3() {
   return (
-    <div className="flex w-full justify-end">
+    <div className="flex w-full justify-end pl-[39px]">
       <h2 className="z-[2] mr-[-160px] mt-[200px] h-fit w-full max-w-[540px]">{title}</h2>
       <div className="z-[1] mt-[-200px] flex h-[1100px] w-[895px] items-center justify-end bg-[#F94F4F] pr-[106px]">
         <ul className="flex flex-col gap-[56px]">

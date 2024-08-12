@@ -6,6 +6,9 @@ module.exports = {
       fontFamily: {
         commissioner: ['"Commissioner"', 'sans-serif'],
       },
+      screens: {
+        screen1500: '1500px',
+      },
     },
   },
   plugins: [],

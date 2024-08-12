@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 h1 {
-  @apply text-[80px] font-extrabold leading-[88px];
+  @apply text-[56px] font-extrabold leading-[56px] xl:text-[80px] xl:leading-[88px];
 }
 
 h2 {
@@ -15,7 +15,7 @@ h3 {
 }
 
 p {
-  @apply text-[18px] leading-[32px];
+  @apply text-[15px] xl:text-[18px] leading-[25px] xl:leading-[32px];
 }
 
 .previous,
@@ -25,4 +25,28 @@ p {
 .previous:hover,
 .next:hover {
   @apply stroke-[#FF9393];
+}
+
+.panel {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+}
+
+.image-container {
+  position: relative;
+}
+
+.image-container::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 200px;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.5) 100%);
+  pointer-events: none;
 }
