@@ -46,7 +46,19 @@ a {
 }
 
 .carouselImage {
-  @apply w-full h-full object-cover pointer-events-none;
+  @apply pointer-events-none h-full w-full object-cover;
+}
+
+.animationElement {
+  @apply transition-transform;
+}
+
+.animationElement.animateTransition {
+  @apply translate-y-[0px] scale-105 transform;
+}
+
+.animationElement {
+  @apply duration-500;
 }
 
 .image-container::after {

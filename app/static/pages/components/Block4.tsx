@@ -38,6 +38,8 @@ const titlesButtons = {
 
 export default function Block4() {
   const flicking = useRef<Flicking>();
+  const mainTitleRef = useRef<HTMLHeadingElement>(null);
+  const sectionRef = useRef<HTMLDivElement>(null);
   const [currentSlide, setCurrentSlide] = useState<TitleKey>(TitleKey.guidelines);
   const [isPlaying, setIsPlaying] = useState(false);
   return (
@@ -51,7 +53,9 @@ export default function Block4() {
           height={60}
         />
         <div className="flex h-[233px] w-[390px] flex-col justify-center gap-[51px] xl:w-[445px]">
-          <h2 className="max-w-[281px] text-white xl:max-w-full">{title[currentSlide].mainTitle}</h2>
+          <h2 ref={mainTitleRef} className="animationElement max-w-[281px] text-white xl:max-w-full">
+            {title[currentSlide].mainTitle}
+          </h2>
           <div className="flex gap-[16px]">
             <button
               disabled={isPlaying}
@@ -94,9 +98,13 @@ export default function Block4() {
         <Flicking
           onMoveStart={() => {
             setIsPlaying(true);
+            mainTitleRef.current?.classList.add('animateTransition');
+            sectionRef.current?.classList.add('animateTransition');
           }}
           onMoveEnd={() => {
             setIsPlaying(false);
+            mainTitleRef.current?.classList.remove('animateTransition');
+            sectionRef.current?.classList.remove('animateTransition');
           }}
           ref={flicking}
           circular
@@ -115,7 +123,7 @@ export default function Block4() {
           </div>
         </Flicking>
         <div className="absolute bottom-[68px] right-[154px] z-[1]">
-          <section className="flex flex-col text-end">
+          <section ref={sectionRef} className="animationElement flex flex-col text-end">
             <h3 className="text-white">{title[currentSlide].title}</h3>
             <p className="text-white">{title[currentSlide].description}</p>
           </section>
