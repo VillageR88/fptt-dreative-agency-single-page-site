@@ -76,7 +76,34 @@ a {
   background-image: url('../assets/mobile/icon-hamburger.svg');
 }
 
+#mask {
+  @apply pointer-events-none;
+}
+
 #mobileNav.open {
   @apply h-[20px] w-[20px];
   background-image: url('../assets/mobile/icon-cross.svg');
+}
+
+body:has(#mobileNav.open) #mobileMenu {
+  @apply translate-x-0;
+}
+
+#mobileMenu {
+  transition: all 0.5s ease 0s;
+  @apply flex translate-x-[150%] md:hidden;
+}
+
+@media (max-width: 768px) {
+  body:has(#mobileMenu.open) #mobileMenuList {
+    @apply pointer-events-auto;
+  }
+
+  body:has(#mobileNav.open) #mask {
+    @apply pointer-events-auto;
+  }
+
+  body:has(#mobileNav.open) {
+    @apply flex min-h-screen overflow-hidden;
+  }
 }
