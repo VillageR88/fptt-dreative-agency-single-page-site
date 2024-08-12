@@ -20,9 +20,9 @@ const buttonTitle = 'Schedule a Call';
 
 export default function Navbar() {
   return (
-    <nav className="z-[2] flex h-[64px] w-full max-w-[calc(1275px+39px)] items-center justify-between self-end overflow-x-clip pl-[39px] md:h-[178px]">
+    <nav className="relative z-[2] flex h-[110px] w-full max-w-[calc(1275px+39px)] items-center justify-between self-end overflow-x-clip pl-[39px] md:h-[178px]">
       <img src={logo as string} alt="logo" />
-      <div className="flex size-full max-w-[438px] items-center gap-[28px] bg-[#F94F4F] pl-[33px] pr-[40px] lg:max-w-[530px] lg:gap-[50px] lg:pr-[20px] xl:max-w-[47vw] xl:gap-[48px] xl:pl-[69px] xl:pr-0 screen1500:max-w-[705px]">
+      <div className="hidden size-full max-w-[438px] items-center gap-[28px] bg-[#F94F4F] pl-[33px] pr-[40px] md:flex lg:max-w-[530px] lg:gap-[50px] lg:pr-[20px] xl:max-w-[47vw] xl:gap-[48px] xl:pl-[69px] xl:pr-0 screen1500:max-w-[705px]">
         <ul className="flex w-full max-w-[190px] justify-between xl:max-w-[225px]">
           {items.map((item) => (
             <li key={item.title}>
@@ -39,6 +39,7 @@ export default function Navbar() {
           {buttonTitle}
         </button>
       </div>
+      <button id="mobileNav" title="mobile navigation" type="button" className="absolute right-[24px] md:opacity-0" />
     </nav>
   );
 }

@@ -46,7 +46,7 @@ a {
 }
 
 .carouselImage {
-  @apply pointer-events-none xl:h-full h-[472px] w-full object-cover object-right;
+  @apply pointer-events-none h-[472px] w-full object-cover object-right xl:h-full;
 }
 
 .animationElement {
@@ -62,11 +62,21 @@ a {
 }
 
 .image-container::after {
-  @apply w-full h-[200px];
+  @apply h-[200px] w-full;
   content: '';
   position: absolute;
   bottom: 0;
   left: 0;
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.5) 100%);
   pointer-events: none;
+}
+
+#mobileNav {
+  @apply h-[18px] w-[24px];
+  background-image: url('../assets/mobile/icon-hamburger.svg');
+}
+
+#mobileNav.open {
+  @apply h-[20px] w-[20px];
+  background-image: url('../assets/mobile/icon-cross.svg');
 }
