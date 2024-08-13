@@ -8,7 +8,7 @@ app = Flask(__name__, static_folder=STATIC_FOLDER_PATH, template_folder="templat
 
 
 def metadata():
-    return {"title": "Scoot multi-page website", "description": "Scoot multi-page website"}
+    return {"title": "Creative agency single-page site", "description": "Creative agency single-page site"}
 
 
 # Custom Jinja2 filter to prepend a dot to the URL
