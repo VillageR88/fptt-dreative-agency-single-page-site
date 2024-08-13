@@ -4,7 +4,10 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        mono: ['"Space Mono"', 'monospace'],
+        commissioner: ['"Commissioner"', 'sans-serif'],
+      },
+      screens: {
+        screen1500: '1500px',
       },
     },
   },

@@ -1,77 +1,22 @@
-import { Link } from 'preact-router';
-import IconFacebook from './IconFacebook';
-import IconTwitter from './IconTwitter';
-import IconInstagram from './IconInstagram';
-import NavbarBlock1 from './NavbarBlock1';
-import IconAppStore from '../../assets/icons/iconApple.svg';
-import IconGooglePlay from '../../assets/icons/iconGooglePlay.svg';
-import patternSemiCircles from '../../assets/patterns/semi-circles.svg';
+import imagePattern from '../../assets/desktop/bg-pattern-wave-red.svg';
 
-const storeIcons = [
-  {
-    imageSrc: IconAppStore as string,
-    key: 'app-store',
-    span: 'Available on the',
-    title: 'AppStore',
-    href: 'https://www.apple.com/app-store/',
-  },
-  {
-    imageSrc: IconGooglePlay as string,
-    key: 'google-play',
-    span: 'Get it on',
-    title: 'GooglePlay',
-    href: 'https://play.google.com/store',
-  },
-];
-
-const socialIcons = [
-  { component: <IconFacebook />, key: 'facebook' },
-  { component: <IconTwitter />, key: 'twitter' },
-  { component: <IconInstagram />, key: 'instagram' },
-];
+const items = {
+  title: 'Let’s build something great together.',
+  buttonDescription: 'Schedule a Call',
+};
 
 export default function Footer() {
   return (
-    <footer className="flex w-full flex-col overflow-x-clip">
-      <div className="relative flex min-h-[320px] w-full items-center justify-center bg-[#495567] px-[40px]  py-[24px] md:min-h-[300px]">
-        <img
-          src={patternSemiCircles as string}
-          alt=""
-          className="pointer-events-none absolute bottom-0 mr-[450px] h-auto min-w-fit md:mr-0 xl:mr-[-600px]"
-        />
-        <div className="flex w-full max-w-[1100px] flex-col items-center justify-between gap-[40px] text-center xl:flex-row xl:text-left">
-          <h2 className="max-w-[415px] text-white">Sign up and Scoot off today</h2>
-          <ul className="flex flex-wrap justify-center gap-[18px]">
-            {storeIcons.map((item) => (
-              <li key={item.key}>
-                <Link
-                  title={item.key}
-                  type="button"
-                  className="buttonStore flex items-center justify-center gap-[11px]"
-                  href={item.href}
-                >
-                  <img src={item.imageSrc} alt="" />
-                  <section className="flex flex-col text-left">
-                    <span className="text-[10px]">{item.span}</span>
-                    <h2 className="text-[20px] leading-[24px] tracking-[-0.89px] text-[#495567]">{item.title}</h2>
-                  </section>
-                </Link>
-              </li>
-            ))}
-          </ul>
-        </div>
-      </div>
-      <div className="flex h-[438px] w-full items-center bg-[#333A44] px-[40px] md:h-[96px]">
-        <div className="mx-auto flex w-full max-w-[1100px] flex-col items-center justify-between gap-[85px] md:flex-row">
-          <NavbarBlock1 />
-          <ul className="flex w-fit items-center gap-[18px]">
-            {socialIcons.map(({ component, key }) => (
-              <li className="transition" key={key}>
-                {component}
-              </li>
-            ))}
-          </ul>
-        </div>
+    <footer className="mx-auto mb-[101px] mt-[100px] flex w-full max-w-[1342px] items-center overflow-hidden px-[24px] md:mt-[70px] md:px-[40px] xl:mb-[115px] xl:ml-[-67px] xl:mt-[120px] xl:px-0">
+      <img className="hidden xl:block" alt="pattern" src={imagePattern as string} width={134} height={60} />
+      <div className="flex w-full flex-col justify-between gap-[47px] md:flex-row md:items-center xl:ml-[98px]">
+        <h2 className="md:max-w-[398px] xl:max-w-[635px]">{items.title}</h2>
+        <button
+          type="button"
+          className="h-[64px] w-[199px] bg-[#F94F4F] text-[16px] font-extrabold text-white transition hover:bg-[#FF9393]"
+        >
+          {items.buttonDescription}
+        </button>
       </div>
     </footer>
   );
