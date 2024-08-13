@@ -27,7 +27,7 @@ export default function Navbar() {
     }
   }
   return (
-    <nav className="relative z-[2] flex h-[110px] w-full max-w-[calc(1275px+39px)] items-center justify-between self-end overflow-x-clip pl-[39px] md:h-[178px]">
+    <nav className="relative z-[2] flex h-[110px] w-full max-w-[calc(1275px+39px)] items-center justify-between self-end overflow-x-clip pl-[24px] md:h-[178px] md:pl-[39px]">
       <div id="mask" className="fixed left-0 top-0 z-[1] flex size-full" />
       <div
         id="mobileMenu"

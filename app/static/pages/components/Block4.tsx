@@ -44,7 +44,7 @@ export default function Block4() {
   const [isPlaying, setIsPlaying] = useState(false);
   return (
     <div className="relative flex w-full flex-col-reverse justify-start md:min-h-[472px] md:flex-row xl:min-h-[728px]">
-      <div className="relative z-[1] flex items-center justify-center bg-[#191921] pl-[40px] md:h-[352px] md:w-1/2 md:max-w-[735px] xl:h-[528px]">
+      <div className="relative z-[1] flex min-h-[272px] items-center justify-start bg-[#191921] px-[24px] py-[64px] md:h-[352px] md:min-h-fit md:w-1/2 md:max-w-[735px] md:justify-center md:py-0 md:pl-[40px] xl:h-[528px]">
         <img
           alt="pattern"
           className="absolute right-[-31px] top-[126px] z-[2] hidden h-[28px] w-[62px] md:block xl:right-[-67px] xl:top-[186px] xl:h-[60px] xl:w-[134px]"
@@ -52,8 +52,8 @@ export default function Block4() {
           width={134}
           height={60}
         />
-        <div className="flex h-[233px] w-[390px] flex-col justify-center gap-[51px] xl:w-[445px]">
-          <h2 ref={mainTitleRef} className="animationElement max-w-[281px] text-white xl:max-w-full">
+        <div className="flex w-full flex-col items-start justify-center gap-[24px] md:h-[233px]  md:w-[390px] md:gap-[51px] xl:w-[445px]">
+          <h2 ref={mainTitleRef} className="animationElement w-full text-white md:max-w-[281px] xl:max-w-full">
             {title[currentSlide].mainTitle}
           </h2>
           <div className="flex gap-[16px]">
@@ -124,7 +124,7 @@ export default function Block4() {
         </Flicking>
         <section
           ref={sectionRef}
-          className="animationElement absolute bottom-[45px] right-[40px] z-[1] flex flex-col text-end xl:bottom-[68px] xl:right-[154px]"
+          className="animationElement pointer-events-none absolute bottom-[45px] right-[40px] z-[1] flex-col text-end xl:bottom-[68px] xl:right-[154px]"
         >
           <h3 className="text-white">{title[currentSlide].title}</h3>
           <p className="text-white">{title[currentSlide].description}</p>
